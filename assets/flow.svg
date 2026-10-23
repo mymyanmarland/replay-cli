@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230">
+  <defs>
+    <linearGradient id="fgrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset=".5" stop-color="#f472b6"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+    <style>
+      .box { fill: #171233; stroke: #a78bfa; stroke-width: 1.6; }
+      .lbl { font-family: Verdana, sans-serif; font-size: 19px; fill: #e9e4ff; font-weight: bold; }
+      .sub { font-family: Verdana, sans-serif; font-size: 13.5px; fill: #9d94c7; }
+      .flow { stroke: url(#fgrad); stroke-width: 3; stroke-dasharray: 10 8; animation: dash 1.6s linear infinite; }
+      @keyframes dash { to { stroke-dashoffset: -36; } }
+      .blink { animation: bl 2.2s ease-in-out infinite; }
+      @keyframes bl { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+    </style>
+  </defs>
+  <rect width="1200" height="230" fill="#0d0a1f"/>
+  <!-- capture sources -->
+  <rect class="box" x="30" y="30" rx="12" width="215" height="76"/>
+  <text class="lbl" x="137" y="62" text-anchor="middle">CAPTURE</text>
+  <text class="sub" x="137" y="86" text-anchor="middle">recorder.js / record</text>
+  <rect class="box" x="30" y="124" rx="12" width="215" height="76"/>
+  <text class="lbl" x="137" y="156" text-anchor="middle">ONE TIMELINE</text>
+  <text class="sub" x="137" y="180" text-anchor="middle">steps+console+network+logs</text>
+  <!-- merge -->
+  <rect class="box" x="355" y="77" rx="12" width="225" height="76"/>
+  <text class="lbl" x="467" y="109" text-anchor="middle">MERGE + REDACT</text>
+  <text class="sub" x="467" y="133" text-anchor="middle">dedupe · secrets stripped</text>
+  <!-- outputs -->
+  <rect class="box" x="690" y="30" rx="12" width="225" height="76"/>
+  <text class="lbl" x="802" y="62" text-anchor="middle">replay-report.md</text>
+  <text class="sub" x="802" y="86" text-anchor="middle">verdict + timeline</text>
+  <rect class="box" x="690" y="124" rx="12" width="225" height="76"/>
+  <text class="lbl" x="802" y="156" text-anchor="middle">replay.spec.ts</text>
+  <text class="sub" x="802" y="180" text-anchor="middle">Playwright repro test</text>
+  <!-- verdict -->
+  <rect x="985" y="77" rx="12" width="185" height="76" fill="#171233" stroke="#fbbf24" stroke-width="1.6"/>
+  <text class="lbl blink" x="1077" y="109" text-anchor="middle" fill="#fbbf24">FAIL → PASS</text>
+  <text class="sub" x="1077" y="133" text-anchor="middle">the fix, proved</text>
+  <path class="flow" d="M 245 68 L 355 100"/>
+  <path class="flow" d="M 245 162 L 355 130"/>
+  <path class="flow" d="M 580 100 L 690 68"/>
+  <path class="flow" d="M 580 130 L 690 162"/>
+  <path class="flow" d="M 915 115 L 985 115"/>
+</svg>

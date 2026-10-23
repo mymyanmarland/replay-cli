@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="44" viewBox="0 0 760 44">
+  <style>
+    .t { font-family: monospace; font-size: 21px; fill: #c4b5fd; }
+    .caret { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 0%,55% { opacity: 1; } 56%,100% { opacity: 0; } }
+    .w1 { animation: s1 9s linear infinite; } .w2 { animation: s2 9s linear infinite; }
+    .w3 { animation: s3 9s linear infinite; }
+    @keyframes s1 { 0%,30% { opacity: 1; } 33%,100% { opacity: 0; } }
+    @keyframes s2 { 0%,32% { opacity: 0; } 36%,62% { opacity: 1; } 66%,100% { opacity: 0; } }
+    @keyframes s3 { 0%,64% { opacity: 0; } 68%,96% { opacity: 1; } 100% { opacity: 0; } }
+  </style>
+  <text class="t w1" x="8" y="29">"I clicked pay and nothing happened."</text>
+  <text class="t w2" x="8" y="29">replay check → BUG REPRODUCED (403, named)</text>
+  <text class="t w3" x="8" y="29">fix → replay.spec.ts PASSES. Proof, not vibes.</text>
+  <text class="t caret" x="738" y="29" fill="#fbbf24">▌</text>
+</svg>

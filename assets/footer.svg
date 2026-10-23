@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="90" viewBox="0 0 1200 90">
+  <defs>
+    <linearGradient id="ftgrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset=".5" stop-color="#f472b6"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+      <animate attributeName="x1" values="0;.25;0" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;1.25;1" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="90" fill="#0d0a1f"/>
+  <rect width="1200" height="3" fill="url(#ftgrad)"/>
+  <text x="600" y="52" text-anchor="middle" font-family="Verdana, sans-serif" font-size="21" fill="url(#ftgrad)" font-weight="bold">replay-cli — cannot reproduce is not an answer</text>
+  <text x="600" y="76" text-anchor="middle" font-family="Verdana, sans-serif" font-size="13.5" fill="#9d94c7">MIT · Python stdlib · CLI + MCP + Skill · sibling of triage-cli &amp; proof-cli</text>
+</svg>

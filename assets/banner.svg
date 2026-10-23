@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="50%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+      <animate attributeName="x1" values="0%;30%;0%" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;130%;100%" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <radialGradient id="glowV" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowA" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .spin { transform-origin: 175px 150px; animation: spin 10s linear infinite; }
+      @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; }
+      @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+    </style>
+  </defs>
+  <rect width="1200" height="340" fill="#0d0a1f"/>
+  <circle cx="180" cy="150" r="200" fill="url(#glowV)"/>
+  <circle cx="1060" cy="52" r="150" fill="url(#glowA)" opacity=".7"/>
+  <g fill="#c4b5fd">
+    <circle cx="430" cy="64" r="3"><animate attributeName="cy" values="64;46;64" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;.3;.9" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="655" cy="42" r="2.4"><animate attributeName="cy" values="42;60;42" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".4;.95;.4" dur="6s" repeatCount="indefinite"/></circle>
+    <circle cx="905" cy="86" r="3"><animate attributeName="cy" values="86;68;86" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;.35;.8" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="540" cy="118" r="2"><animate attributeName="cy" values="118;102;118" dur="4.5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;.3;.7" dur="4.5s" repeatCount="indefinite"/></circle>
+  </g>
+  <!-- replay circular arrow -->
+  <g class="spin">
+    <path d="M 175 62 A 88 88 0 1 1 87 150" fill="none" stroke="url(#grad)" stroke-width="13" stroke-linecap="round"/>
+  </g>
+  <path d="M 62 118 L 90 152 L 118 120 Z" fill="#fbbf24">
+    <animateTransform attributeName="transform" type="rotate" from="0 90 130" to="-360 90 130" dur="10s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="175" cy="150" r="34" fill="#f472b6" class="pulse"/>
+  <path d="M 163 132 L 196 150 L 163 168 Z" fill="#0d0a1f"/>
+  <text x="330" y="140" font-family="Verdana, sans-serif" font-size="72" font-weight="bold" fill="url(#grad)">replay-cli</text>
+  <text x="333" y="192" font-family="Verdana, sans-serif" font-size="27" fill="#e9e4ff">Capture the bug once. Replay it to prove the fix.</text>
+  <text x="333" y="240" font-family="Verdana, sans-serif" font-size="19" fill="#9d94c7">one timeline · replay-report.md · replay.spec.ts · FAIL → PASS</text>
+  <g font-family="Verdana, sans-serif" font-size="16">
+    <rect x="333" y="268" rx="14" width="150" height="30" fill="none" stroke="#a78bfa"/>
+    <text x="408" y="289" fill="#c4b5fd" text-anchor="middle">CLI + MCP + Skill</text>
+    <rect x="499" y="268" rx="14" width="132" height="30" fill="none" stroke="#fbbf24"/>
+    <text x="565" y="289" fill="#fde68a" text-anchor="middle">stdlib only</text>
+    <rect x="647" y="268" rx="14" width="118" height="30" fill="none" stroke="#f472b6"/>
+    <text x="706" y="289" fill="#fbcfe8" text-anchor="middle">MIT open source</text>
+  </g>
+</svg>

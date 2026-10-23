@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+capture.json
+replay-report.md
+replay.spec.ts
+proof-screenshots/
